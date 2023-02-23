@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vendors/jquery-3.6.3.min.js"></script>
+    <script src="./base.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+ <nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+   瀏覽公布事項
+  </div>
+</nav>   
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">標題</th>
+      <th scope="col">發布日期</th>
+      <th scope="col">截止日期</th>
+      <th scope="col">修改</th>
+      <th scope="col">刪除</th>
+    </tr>
+  </thead>
+  <tbody>
+      <!-- data
+        
+       -->
+  </tbody>
+</table>
+
+  <ul class="pagination ">
+    <li class="page-item"><button type="button" class="page-link" id="lastpage">上一頁</button></li>
+    <li class="page-item"><button type="button" class="page-link" id="nextpage">下一頁</button></li>
+  </ul>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">新增</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="insertModalLabel">新增公布事項</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="title">標題</label>
+                  <input type="title" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="releasedate">發布日期</label>
+                    <input type="date" class="form-control" id="releasedate">
+                  </div>
+                <div class="form-group">
+                    <label for="enddate">截止日期</label>
+                    <input type="date" class="form-control" id="enddate">
+                  </div>
+                  <div class="form-group">
+                    <label for="administrator">發布者</label>
+                    <input type="user" class="form-control" id="eadministrator">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">公布內容</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="addData" data-bs-dismiss="modal">新增</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="updateModalLabel">修改公布事項</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="title">標題</label>
+                      <input type="title" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="releasedate">發布日期</label>
+                        <input type="text" class="form-control" id="releasedate">
+                      </div>
+                    <div class="form-group">
+                        <label for="enddate">截止日期</label>
+                        <input type="text" class="form-control" id="enddate">
+                      </div>
+                      <div class="form-group">
+                        <label for="administrator">發布者</label>
+                        <input type="user" class="form-control" id="eadministrator">
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">公布內容</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary edit" data-bs-dismiss="modal">修改</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
